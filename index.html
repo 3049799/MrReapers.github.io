@@ -5,6 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MrReapers</title>
     <link rel="stylesheet" href="MrReapers.css">
+    <style>
+    h1 {
+  display: inline-block;
+  border: 5px solid rgb(255, 255, 255);
+}
+ ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: black;
+    color: white;
+}
+.navbar {
+    background: #333;
+    padding: 10px;
+}
+
+.navbar button {
+    background: none;
+    border: none;
+    color: white;
+    margin-right: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.navbar button:hover {
+    text-decoration: underline;
+}
+
+    /* Pages */
+.page {
+    display: none;
+    padding: 20px;
+}
+
+.active {
+    display: block;
+}
+</style>
 </head>
 <body>
 
@@ -60,6 +104,16 @@
     <img src="https://preview.redd.it/4dv8gt4efr361.png?width=640&crop=smart&auto=webp&s=9037a09a5098fbe415971a1adfde41091c93c168"><br>
     <img src="https://www.reddit.com/r/memes/comments/jneaff/uhthanks_windows/"><br>
   </div>
-  <script src="/home/andrew/WebPage1/JS/MrReapers.js"></script>
+  <script>    
+  function showPage(pageId) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.classList.remove('active'));
+
+      const selected = document.getElementById(pageId);
+      if (selected) {
+        selected.classList.add('active');
+      }
+    }
+</script>
 </body>
 </html>
