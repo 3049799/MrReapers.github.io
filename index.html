@@ -1,30 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <title>MrReapers</title>
-    <link href="MrReapers.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MrReapers</title>
+    <link rel="stylesheet" href="MrReapers.css">
 </head>
-<body style="background-color: black;">
-    <center>
-        <h1 style="color: white;">
-            MrReapers Code Page
-        </h1>
-        <h3 style="color: white;">
-            Goated Page
-        </h3>
-    </center>
-    <li>
-        <a><ul style="color: white;">Gituhb Repo</ul></a>
-    </li>
-    <h3 style="color: white;">Friends Stuff</h3>
-    <li>
-        <a href="https://college.uber.space" target="_blank"><ul style="color: white;">Ghost Link</ul></a>
-        <a href="https://0t5.xyz" target="_blank"><ul style="color: white;">0t5's Stuff</ul></a>
-    </li>
+<body>
 
-    <button style="color: white;background-color: black;" onclick="window.alert('Last modified: ' + document.lastModified)">Last Modified</button>
+  <!-- Navbar -->
+  <div class="navbar">
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('friends')">Friends</button>
+    <button onclick="showPage('links')">Links</button>
+    <button onclick="showPage('reddit')">Reddit</button>
+  </div>
+
+  <!-- Home Page -->
+  <div id="home" class="page active">
+    <center>
+      <h1>MrReapers Code Page</h1>
+      <h3>Goated Page</h3>
+    </center>
+
+    <button onclick="window.alert('Last modified: ' + document.lastModified)">
+      Last Modified
+    </button>
+  </div>
+
+  <!-- Friends Page -->
+  <div id="friends" class="page">
+    <h3>Friends Stuff</h3>
+    <ul>
+      <li><a href="https://college.uber.space" target="_blank">Ghost Link</a></li>
+      <li><a href="https://0t5.xyz" target="_blank">0t5's Stuff</a></li>
+    </ul>
+  </div>
+
+  <!-- Links Page -->
+  <div id="links" class="page">
+    <h3>Links</h3>
+    <ul>
+      <li><a href="https://github.com/3049799/MrReapers" target="_blank">GitHub Repo</a></li>
+    </ul>
+  </div>
+
+  <!-- Redit Page -->
+  <div id="reddit" class="page">
+    <h3>Random Redit Memes</h3>
+    <img src="https://preview.redd.it/gotta-love-school-computers-v0-wg7d596f3gk41.jpg?auto=webp&s=4d820e674e9818380ace502765bbfac7117e8290"><br>
+    <img src="https://preview.redd.it/2bp4h751i2091.png?width=1080&crop=smart&auto=webp&s=119d1d5e9ee6782a207dcdb34e35568272298b93"><br>
+    <img src="https://preview.redd.it/computer-memes-v0-rddjyrig0bbb1.jpg?auto=webp&s=76dcf0af874c5cba1eb1d39df8c0b925e9837fc5"><br>
+    <img src="https://www.reddit.com/r/linuxmemes/comments/1or34wd/made_some_linux_memes/"><br>
+    <img src="https://preview.redd.it/linux-meme-v0-hmea2uly59nf1.jpeg?auto=webp&s=84c42d365b29725403e7c30f86025fb0369f686f"><br>
+    <img src="https://preview.redd.it/got-more-linux-memes-v0-ajf2g573eh0g1.png?width=995&format=png&auto=webp&s=70e22683d5cf3c1140f219c74b8f10188b2b8332"><br>
+    <img src="https://preview.redd.it/technology-oc-borrowed-format-v0-0ec8s9ymr9921.jpg?width=1080&crop=smart&auto=webp&s=46400b08ce47dd046c29d163c5c8668b19da2cff"><br>
+    <img src="https://preview.redd.it/ugroajv1kys51.jpg?width=1080&crop=smart&auto=webp&s=45c5c17fbfd08ef78d7218ac462a38eb3da8b255"><br>
+    <img src="https://www.reddit.com/r/windowsmemes/comments/1rb6gvq/my_best_windows_meme_to_date/"><br>
+    <img src="https://preview.redd.it/4dv8gt4efr361.png?width=640&crop=smart&auto=webp&s=9037a09a5098fbe415971a1adfde41091c93c168"><br>
+    <img src="https://www.reddit.com/r/memes/comments/jneaff/uhthanks_windows/"><br>
+  </div>
+  <script src="/home/andrew/WebPage1/JS/MrReapers.js"></script>
 </body>
 </html>
