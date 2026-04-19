@@ -1,0 +1,1 @@
+Hi, sorry that everything is blank I just like when its simple to have 1 single file so ya, download the html file open it and thats it, anyways this is just my crap I don't know what Im gonna do with it, I'm just doing this until I find something actualy good to code so yup, alright bye!
