@@ -1,119 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MrReapers</title>
-    <link rel="stylesheet" href="MrReapers.css">
-    <style>
-    h1 {
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MrReapers</title>
+
+<style>
+h1 {
   display: inline-block;
   border: 5px solid rgb(255, 255, 255);
 }
- ul {
+
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: black;
-    color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: black;
+  color: white;
 }
+
 .navbar {
-    background: #333;
-    padding: 10px;
+  background: #333;
+  padding: 10px;
 }
 
 .navbar button {
-    background: none;
-    border: none;
-    color: white;
-    margin-right: 15px;
-    font-size: 16px;
-    cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  margin-right: 15px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .navbar button:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-    /* Pages */
 .page {
-    display: none;
-    padding: 20px;
+  display: none;
+  padding: 20px;
 }
 
 .active {
-    display: block;
+  display: block;
+}
+
+canvas {
+  background: black;
+  display: block;
+  margin: 0 auto;
+  border: solid 10px white;
 }
 </style>
 </head>
+
 <body>
 
-  <!-- Navbar -->
-  <div class="navbar">
-    <button onclick="showPage('home')">Home</button>
-    <button onclick="showPage('friends')">Friends</button>
-    <button onclick="showPage('links')">Links</button>
-    <button onclick="showPage('reddit')">Reddit</button>
-  </div>
+<!-- NAVBAR -->
+<div class="navbar">
+  <button onclick="showPage('home')">Home</button>
+  <button onclick="showPage('friends')">Friends</button>
+  <button onclick="showPage('links')">Links</button>
+  <button onclick="showPage('reddit')">Reddit</button>
+  <button onclick="showPage('notes')">Notes</button>
+</div>
 
-  <!-- Home Page -->
-  <div id="home" class="page active">
-    <center>
-      <h1>MrReapers Code Page</h1>
-      <h3>Goated Page</h3>
-    </center>
+<!-- HOME -->
+<div id="home" class="page active">
+  <center>
+    <h1>MrReapers Code Page</h1>
+    <h3>Goated Page</h3>
+  </center>
 
-    <button onclick="window.alert('Last modified: ' + document.lastModified)">
-      Last Modified
-    </button>
-  </div>
+  <button onclick="alert('Last modified: ' + document.lastModified)">
+    Last Modified
+  </button>
+</div>
 
-  <!-- Friends Page -->
-  <div id="friends" class="page">
-    <h3>Friends Stuff</h3>
-    <ul>
-      <li><a href="https://college.uber.space" target="_blank">Ghost Link</a></li>
-      <li><a href="https://0t5.xyz" target="_blank">0t5's Stuff</a></li>
-    </ul>
-  </div>
+<!-- FRIENDS -->
+<div id="friends" class="page">
+  <h3>Friends Stuff</h3>
+  <ul>
+    <li><a href="https://college.uber.space" target="_blank" style="color: white;">Ghost Link</a></li>
+    <li><a href="https://0t5.xyz" target="_blank" style="color: white;">0t5's Stuff</a></li>
+  </ul>
+</div>
 
-  <!-- Links Page -->
-  <div id="links" class="page">
-    <h3>Links</h3>
-    <ul>
-      <li><a href="https://github.com/3049799/MrReapers" target="_blank">GitHub Repo</a></li>
-    </ul>
-  </div>
+<!-- LINKS -->
+<div id="links" class="page">
+  <h3>Links</h3>
+  <ul>
+    <li><a href="https://github.com/3049799/MrReapers" target="_blank" style="color: white;">GitHub Repo</a></li>
+  </ul>
+</div>
 
-  <!-- Redit Page -->
-  <div id="reddit" class="page">
-    <h3>Random Redit Memes</h3>
-    <img src="https://preview.redd.it/gotta-love-school-computers-v0-wg7d596f3gk41.jpg?auto=webp&s=4d820e674e9818380ace502765bbfac7117e8290"><br>
-    <img src="https://preview.redd.it/2bp4h751i2091.png?width=1080&crop=smart&auto=webp&s=119d1d5e9ee6782a207dcdb34e35568272298b93"><br>
-    <img src="https://preview.redd.it/computer-memes-v0-rddjyrig0bbb1.jpg?auto=webp&s=76dcf0af874c5cba1eb1d39df8c0b925e9837fc5"><br>
-    <img src="https://www.reddit.com/r/linuxmemes/comments/1or34wd/made_some_linux_memes/"><br>
-    <img src="https://preview.redd.it/linux-meme-v0-hmea2uly59nf1.jpeg?auto=webp&s=84c42d365b29725403e7c30f86025fb0369f686f"><br>
-    <img src="https://preview.redd.it/got-more-linux-memes-v0-ajf2g573eh0g1.png?width=995&format=png&auto=webp&s=70e22683d5cf3c1140f219c74b8f10188b2b8332"><br>
-    <img src="https://preview.redd.it/technology-oc-borrowed-format-v0-0ec8s9ymr9921.jpg?width=1080&crop=smart&auto=webp&s=46400b08ce47dd046c29d163c5c8668b19da2cff"><br>
-    <img src="https://preview.redd.it/ugroajv1kys51.jpg?width=1080&crop=smart&auto=webp&s=45c5c17fbfd08ef78d7218ac462a38eb3da8b255"><br>
-    <img src="https://www.reddit.com/r/windowsmemes/comments/1rb6gvq/my_best_windows_meme_to_date/"><br>
-    <img src="https://preview.redd.it/4dv8gt4efr361.png?width=640&crop=smart&auto=webp&s=9037a09a5098fbe415971a1adfde41091c93c168"><br>
-    <img src="https://www.reddit.com/r/memes/comments/jneaff/uhthanks_windows/"><br>
-  </div>
-  <script>    
-  function showPage(pageId) {
-      const pages = document.querySelectorAll('.page');
-      pages.forEach(page => page.classList.remove('active'));
+<!-- REDDIT (RESTORED EXACTLY) -->
+<div id="reddit" class="page">
+  <h3>Random Reddit Memes</h3>
 
-      const selected = document.getElementById(pageId);
-      if (selected) {
-        selected.classList.add('active');
-      }
-    }
+  <img src="https://preview.redd.it/gotta-love-school-computers-v0-wg7d596f3gk41.jpg?auto=webp&s=4d820e674e9818380ace502765bbfac7117e8290"><br>
+  <img src="https://preview.redd.it/2bp4h751i2091.png?width=1080&crop=smart&auto=webp&s=119d1d5e9ee6782a207dcdb34e35568272298b93"><br>
+  <img src="https://preview.redd.it/computer-memes-v0-rddjyrig0bbb1.jpg?auto=webp&s=76dcf0af874c5cba1eb1d39df8c0b925e9837fc5"><br>
+  <img src="https://www.reddit.com/r/linuxmemes/comments/1or34wd/made_some_linux_memes/"><br>
+  <img src="https://preview.redd.it/linux-meme-v0-hmea2uly59nf1.jpeg?auto=webp&s=84c42d365b29725403e7c30f86025fb0369f686f"><br>
+  <img src="https://preview.redd.it/got-more-linux-memes-v0-ajf2g573eh0g1.png?width=995&format=png&auto=webp&s=70e22683d5cf3c1140f219c74b8f10188b2b8332"><br>
+  <img src="https://preview.redd.it/technology-oc-borrowed-format-v0-0ec8s9ymr9921.jpg?width=1080&crop=smart&auto=webp&s=46400b08ce47dd046c29d163c5c8668b19da2cff"><br>
+  <img src="https://preview.redd.it/ugroajv1kys51.jpg?width=1080&crop=smart&auto=webp&s=45c5c17fbfd08ef78d7218ac462a38eb3da8b255"><br>
+  <img src="https://www.reddit.com/r/windowsmemes/comments/1rb6gvq/my_best_windows_meme_to_date/"><br>
+  <img src="https://preview.redd.it/4dv8gt4efr361.png?width=640&crop=smart&auto=webp&s=9037a09a5098fbe415971a1adfde41091c93c168"><br>
+  <img src="https://www.reddit.com/r/memes/comments/jneaff/uhthanks_windows/"><br>
+</div>
+<script>
+function showPage(pageId) {
+  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+  document.getElementById(pageId).classList.add("active");
+  currentPage = pageId;
+}
 </script>
 </body>
 </html>
