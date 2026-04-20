@@ -69,7 +69,8 @@ canvas {
   <button onclick="showPage('links')">Links</button>
   <button onclick="showPage('reddit')">Reddit</button>
   <button onclick="showPage('notes')">Notes</button>
-</div>
+  <button onclick="showPage('Coder Clicker')">Clicker</button>
+</div >
 
 <!-- HOME -->
 <div id="home" class="page active">
@@ -125,6 +126,38 @@ canvas {
 Type your notes here!
     </textarea>
     <hr>
+</div>
+<div id="Coder Clicker" class="page">
+<p id="demo">JavaScript can change the style of an HTML element.</p>
+
+<script>
+   function incrementValue()
+        {
+            var demo_id = document.getElementById('demo')
+            var value = parseInt(demo_id.value, 10);
+            // if NaN, set to 0, else, keep the current value
+            value = isNaN(value) ? 0 : value;
+            value++;
+            demo_id.value = value;
+
+            if ((value%2)==0){
+                demo_id.innerHTML = value;
+                demo_id.style.fontSize = "15px"; 
+                demo_id.style.color = "black";
+                demo_id.style.backgroundColor = "white";   
+            } 
+            else {
+                demo_id.innerHTML = value.toString() ;
+                demo_id.style.fontSize = "15px"; 
+                demo_id.style.color = "black";
+                demo_id.style.backgroundColor = "white";
+            }
+        }
+</script>
+
+<form>
+    <input type="button" onclick="incrementValue()" value="Files" />
+</form>
 </div>
 <script>
 function showPage(pageId) {
