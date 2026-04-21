@@ -128,36 +128,84 @@ Type your notes here!
     <hr>
 </div>
 <div id="Coder Clicker" class="page">
-<p id="demo">JavaScript can change the style of an HTML element.</p>
+<p id="demo">0</p>
+
+<button onclick="incrementValue()">Click</button>
+
+<h3>Shop</h3>
+<button onclick="buyKey()">Buy Key (+1 per click) - Cost: 20</button><br>
+<button onclick="buyCoder()">Hire Coder (+1/sec) - Cost: 50</button><br>
+<button onclick="buyRepo()">Create GitHub Repo (+10/sec) - Cost: 200</button><br>
+<button onclick="buyServer()">Buy Server (+20/sec) - Cost: 500</button><br>
+<button onclick="buyStartup()">Launch Startup (+100/sec) - Cost: 2000</button><br>
+<button onclick="buyAI()">Build AI (+1000/sec) - Cost: 10000</button>
 
 <script>
-   function incrementValue()
-        {
-            var demo_id = document.getElementById('demo')
-            var value = parseInt(demo_id.value, 10);
-            // if NaN, set to 0, else, keep the current value
-            value = isNaN(value) ? 0 : value;
-            value++;
-            demo_id.value = value;
+let value = 0;
+let clickPower = 1;
+let passiveIncome = 0;
 
-            if ((value%2)==0){
-                demo_id.innerHTML = value;
-                demo_id.style.fontSize = "15px"; 
-                demo_id.style.color = "black";
-                demo_id.style.backgroundColor = "white";   
-            } 
-            else {
-                demo_id.innerHTML = value.toString() ;
-                demo_id.style.fontSize = "15px"; 
-                demo_id.style.color = "black";
-                demo_id.style.backgroundColor = "white";
-            }
-        }
+function updateDisplay() {
+    document.getElementById("demo").innerHTML = value;
+}
+
+function incrementValue() {
+    value += clickPower;
+    updateDisplay();
+}
+
+function buyKey() {
+    if (value >= 20) {
+        value -= 20;
+        clickPower += 1;
+        updateDisplay();
+    }
+}
+
+function buyCoder() {
+    if (value >= 50) {
+        value -= 50;
+        passiveIncome += 1;
+        updateDisplay();
+    }
+}
+
+function buyRepo() {
+    if (value >= 200) {
+        value -= 200;
+        passiveIncome += 10;
+        updateDisplay();
+    }
+}
+
+setInterval(() => {
+    value += passiveIncome;
+    updateDisplay();
+}, 1000);
+function buyServer() {
+    if (value >= 500) {
+        value -= 500;
+        passiveIncome += 20;
+        updateDisplay();
+    }
+}
+
+function buyStartup() {
+    if (value >= 2000) {
+        value -= 2000;
+        passiveIncome += 100;
+        updateDisplay();
+    }
+}
+
+function buyAI() {
+    if (value >= 10000) {
+        value -= 10000;
+        passiveIncome += 1000;
+        updateDisplay();
+    }
+}
 </script>
-
-<form>
-    <input type="button" onclick="incrementValue()" value="Files" />
-</form>
 </div>
 <script>
 function showPage(pageId) {
